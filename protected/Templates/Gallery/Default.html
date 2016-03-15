@@ -1,0 +1,49 @@
+{% extends 'Index.html' %}
+
+{% block title %}Галерея {% endblock %}
+{% block heading %} <h2>Галерея</h2> {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/1.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/1.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/2.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/2.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/3.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/3.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/4.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/4.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/5.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/5.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/6.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/6.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/7.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/7.jpg') }}">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{ asset('/Layouts/Assets/img/8.jpg') }}">
+            <img class="img-responsive" src="{{ asset('/Layouts/Assets/img/8.jpg') }}">
+        </a>
+    </div>
+</div>
+{% endblock %}

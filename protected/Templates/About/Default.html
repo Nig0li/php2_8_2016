@@ -1,0 +1,19 @@
+{% extends 'Index.html' %}
+
+{% block title %}О нас {% endblock %}
+{% block heading %} <h2>Знаете ли вы?</h2> {% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left">
+            <h3>{{ article.title }}</h3>
+        </div>
+        <div class="text-right">
+            дата публикации
+            <div style="display: inline-block; font-size: 20px;">{{ date | date('d.m.Y') }}</div>
+        </div>
+    </div>
+    <div class="panel-body">{{ article.text }}</div>
+</div>
+{% endblock %}

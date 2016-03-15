@@ -1,0 +1,50 @@
+{% extends 'Admin.html' %}
+
+{% block title %} Админ-панель {% endblock %}
+
+{% block content %}
+<!-- РЕДАКТИРОВАНИЕ -->
+<div class="panel-group" id="collapse-group">
+    <!-- История -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#collapse-group" href="#el1">Редактировать - "История"</a>
+            </h4>
+        </div>
+        <div id="el1" class="panel-collapse collapse in">
+            <div class="panel-body">
+
+                <!-- ФОРМА - предварительный просмотр -->
+                <form action="/admin/edit" method="post">
+                    <input type="hidden" name="id" value="{{ history.__id }}">
+                    Заголовок <br>
+                    <input type="text" class="form-control" name="title" value="{{ history.title }}"><br>
+                    Содержание <br>
+                    <textarea class="form-control" name="text">{{ history.text }}</textarea><br>
+                    <input class="btn" name="edit" type="submit" value="Посмотреть">
+                </form>
+                <br>
+                <strong> Предварительный просмотр </strong>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {{ history.title }}
+                    </div>
+                    <div class="panel-body">
+                        <p>{{ history.text }}</p>
+                    </div>
+                </div>
+                <br>
+
+                <!-- ФОРМА сохранение -->
+                <form action="/admin/edit" method="post">
+                    <input type="hidden" name="id" value="{{ history.__id }}">
+                    <input type="hidden" name="title" value="{{ history.title }}">
+                    <input type="hidden" name="text" value="{{ history.text}}">
+                    <input class="btn" name="save" type="submit" value="Сохранить">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'Index.html' %}
+
+{% block title %}Новости {% endblock %}
+{% block heading %} <h2>Интересные факты</h2> {% endblock %}
+
+{% block content %}
+<div class="panel-group">
+    <div class="panel panel-default">
+        {% for art in news %}
+            <div class="panel-heading">{{ art.title }}</div>
+            <div class="panel-body">{{ art.text }}</div>
+        {% endfor %}
+    </div>
+</div>
+<hr>
+<br>
+{% endblock %}
